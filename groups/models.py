@@ -19,7 +19,7 @@ class Group(models.Model):
     description_html = models.TextField(editable=False,default='',blank=True)
     members = models.ManyToManyField(User,through='GroupMember')
 
-    def __str__(self):s
+    def __str__(self):
         return self.name
 
     def save(self,*args,**kwargs):
